@@ -1,0 +1,123 @@
+#MainWindow {
+    /* background: qlineargradient(x1:0, y1: 0, x2: 1, y2: 1, stop:0 #ffffff, stop:0.74 #26C485) */
+    background-image: url('icons/bg-app.jpg');
+}
+
+#change_button {
+
+    padding: 5px;
+    border:none;
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Styles for the menu with only icons */
+
+#iconWidget {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #5D8AC4, stop: 1 #254D78); 
+    width: 50 px;
+
+}
+
+#iconWidget QPushButton, QLabel {
+
+    height: 50px;
+    border: none;
+}
+
+#iconWidget QPushButton{
+    margin-top: 20px;
+    padding-top: 0px;
+    text-align: center;
+}
+
+#iconWidget QPushButton:hover {
+
+    background-color: #4E7AB1;
+}
+
+#fullMenuWidget QPushButton:checked {
+    color: #DEF2F1;
+    
+}
+
+#logo_label_1 {
+    padding: 5px;
+}
+/* Styles for the menu with only icons */
+
+
+
+/* Styles for the menu with icons and text */
+#fullMenuWidget {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #5D8AC4, stop: 1 #254D78); 
+}
+
+#fullMenuWidget QPushButton{
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 10px 8px 10px;
+    margin-top: 20px;
+    color: FEFFFF;
+}
+
+#fullMenuWidget QPushButton:hover {
+    background-color: #4E7AB1;
+
+    /* ANIMATED BORDER SOMETIME */
+}
+
+
+
+#logo_label_2 {
+    padding: 5px;
+    color:#fff;
+}
+
+#logo_text {
+    color: #fff;
+}
+
+/* Styles for the menu with icons and text */
+
+/* Stacked widget styles */
+#stackedWidget {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #5D8AC4, stop: 1 #254D78); 
+
+}
+
+#stackedWidget QProgressBar {
+    background-color: #e9e7e7;
+
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+
+    text-align: center;
+    font-family: Satoshi;
+    font-weight: bold;
+}
+
+
+#stackedWidget QLabel {
+    color:#DEF2F1;
+    font-family: Satoshi;
+    font-weight: bold;
+    
+}
+/* Stacked widget styles */
+
+#TabelTanc{
+    background:white;
+}
+#WidgetTabel {
+    background-color: white;
+
+}
+
+#TabelDate {
+    font-family: Satoshi;
+}
+

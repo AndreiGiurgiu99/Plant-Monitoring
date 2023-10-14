@@ -1,0 +1,25 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/SQL_alb_nou.svg</file>
+    <file>icons/analysis.svg</file>
+    <file>icons/CoA_alb.svg</file>
+    <file>icons/DB.svg</file>
+    <file>icons/exit.svg</file>
+    <file>icons/logo.svg</file>
+    <file>icons/menu.svg</file>
+    <file>icons/menu_alb.svg</file>
+    <file>icons/menu_negru.svg</file>
+    <file>icons/SQL_alb.svg</file>
+    <file>icons/tankDMP1.svg</file>
+    <file>icons/tankDMP1_alb.svg</file>
+    <file>icons/tankDMP2.svg</file>
+    <file>icons/tankDMP2_alb.svg</file>
+    <file>icons/logo.svg</file>
+    <file>icons/exit.svg</file>
+    <file>icons/analysis.svg</file>
+    <file>icons/DB.svg</file>
+    <file>icons/menu.svg</file>
+    <file>icons/tankDMP1.svg</file>
+    <file>icons/tankDMP2.svg</file>
+  </qresource>
+</RCC>
