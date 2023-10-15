@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>462</width>
-    <height>516</height>
+    <width>454</width>
+    <height>475</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,181 +17,198 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="WidgetTabel">
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QTableWidget" name="TabelDate">
-      <property name="font">
-       <font>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <property name="verticalScrollBarPolicy">
-       <enum>Qt::ScrollBarAsNeeded</enum>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QAbstractScrollArea::AdjustToContents</enum>
-      </property>
-      <property name="autoScroll">
-       <bool>true</bool>
-      </property>
-      <property name="autoScrollMargin">
-       <number>16</number>
-      </property>
-      <property name="editTriggers">
-       <set>QAbstractItemView::NoEditTriggers</set>
-      </property>
-      <property name="tabKeyNavigation">
-       <bool>true</bool>
-      </property>
-      <property name="showDropIndicator" stdset="0">
-       <bool>true</bool>
-      </property>
-      <property name="dragDropOverwriteMode">
-       <bool>true</bool>
-      </property>
-      <property name="alternatingRowColors">
-       <bool>true</bool>
-      </property>
-      <property name="selectionMode">
-       <enum>QAbstractItemView::ExtendedSelection</enum>
-      </property>
-      <property name="selectionBehavior">
-       <enum>QAbstractItemView::SelectRows</enum>
-      </property>
-      <property name="textElideMode">
-       <enum>Qt::ElideMiddle</enum>
-      </property>
-      <property name="showGrid">
-       <bool>true</bool>
-      </property>
-      <property name="gridStyle">
-       <enum>Qt::SolidLine</enum>
-      </property>
-      <property name="sortingEnabled">
-       <bool>false</bool>
-      </property>
-      <property name="wordWrap">
-       <bool>false</bool>
-      </property>
-      <property name="cornerButtonEnabled">
-       <bool>true</bool>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="horizontalHeaderCascadingSectionResizes">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="horizontalHeaderHighlightSections">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="verticalHeaderHighlightSections">
-       <bool>true</bool>
-      </attribute>
-      <row>
-       <property name="text">
-        <string>TT1</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>TT2</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>TT3</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>TT4</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>PT1</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>PT2</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>PT3</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>PT4/SAN 25%</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>PT5</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>PT6/SAN 45%</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>PT7/SAN 45%</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>PT8/DOCKET</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>PT9/DILUTIE</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>PT10/PHD</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>PT11/POLIFUNCTIONAL</string>
-       </property>
-      </row>
-      <column>
-       <property name="text">
-        <string>CANT ZI ANTERIOARA</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>CANT ACTUALA</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>DIFERENTA</string>
-       </property>
-      </column>
-      <item row="8" column="0">
-       <property name="text">
-        <string/>
-       </property>
-      </item>
-     </widget>
+   <widget class="QTableWidget" name="TabelDate">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>463</width>
+      <height>493</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+    <property name="autoScroll">
+     <bool>true</bool>
+    </property>
+    <property name="autoScrollMargin">
+     <number>16</number>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="tabKeyNavigation">
+     <bool>true</bool>
+    </property>
+    <property name="showDropIndicator" stdset="0">
+     <bool>true</bool>
+    </property>
+    <property name="dragDropOverwriteMode">
+     <bool>true</bool>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::ExtendedSelection</enum>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectRows</enum>
+    </property>
+    <property name="textElideMode">
+     <enum>Qt::ElideMiddle</enum>
+    </property>
+    <property name="showGrid">
+     <bool>true</bool>
+    </property>
+    <property name="gridStyle">
+     <enum>Qt::SolidLine</enum>
+    </property>
+    <property name="sortingEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+    <property name="cornerButtonEnabled">
+     <bool>true</bool>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderHighlightSections">
+     <bool>true</bool>
+    </attribute>
+    <row>
+     <property name="text">
+      <string>TT1</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>TT2</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>TT3</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>TT4</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>PT1</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>PT2</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>PT3</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>PT4/SAN 25%</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>PT5</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>PT6/SAN 45%</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>PT7/SAN 45%</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>PT8/DOCKET</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>PT9/DILUTIE</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>PT10/PHD</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>PT11/POLIFUNCTIONAL</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>CANT ZI ANTERIOARA</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>CANT ACTUALA</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>DIFERENTA</string>
+     </property>
+    </column>
+    <item row="8" column="0">
+     <property name="text">
+      <string/>
+     </property>
     </item>
-   </layout>
+   </widget>
+   <widget class="QPushButton" name="Copiere">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>10</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Copiere</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar">
    <property name="enabled">

@@ -22,7 +22,7 @@ class WorkerThread(QThread):
 
     def run(self):
         def dataFunction():
-            self.dF = GetData()
+            self.dF = GetData2()
             self.update_signal.emit(self.dF)
             print('dF was emitted')
 
@@ -31,6 +31,35 @@ class WorkerThread(QThread):
         self.timer.start(5000)
 
         self.exec()
+
+class AnotherWindow(QMainWindow):
+    
+    def __init__(self):
+        super().__init__()
+
+        self.w2 = Ui_TabelTanc()
+        self.w2.setupUi(self)
+        self.clip = QtGui.QGuiApplication.clipboard()
+    
+    def keyPressEvent(self, event):
+        if (event.modifiers() & QtCore.Qt.KeyboardModifier.ControlModifier):
+            selected = self.w2.TabelDate.selectedRanges()
+
+            if event.key() == QtCore.Qt.Key.Key_C:
+                print('Data copied')
+                copied = '\t'+"\t".join([str(self.w2.TabelDate.horizontalHeaderItem(i).text()) 
+                                            for i in range(selected[0].leftColumn(), selected[0].rightColumn()+1)])
+                copied = copied + '\n'
+
+                for row in range(selected[0].topRow(), selected[0].bottomRow()+1):
+                    copied += self.w2.TabelDate.verticalHeaderItem(row).text() + '\t'
+                    for column in range(selected[0].leftColumn(), selected[0].rightColumn()+1):
+                        try:
+                            copied += str(self.w2.TabelDate.item(row,column).text()) + "\t"
+                        except AttributeError:
+                            copied += "\t"
+                    copied = copied[:-1] + "\n" #eliminate last '\t'
+                self.clip.setText(copied)
     
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -55,7 +84,7 @@ class MainWindow(QMainWindow):
 
         #SHORTCUTS#
         QShortcut('Esc',self,self.close)
-
+  
         
         #BUTTONS#
         self.ui.dmp1_button_1.toggled.connect(self.changePage)
@@ -67,18 +96,19 @@ class MainWindow(QMainWindow):
         
 
         #Make second window object
-        self.window = QtWidgets.QMainWindow()
-        self.w2 = Ui_TabelTanc()
-        self.w2.setupUi(self.window)
+        self.window = AnotherWindow()
+        # self.w2 = Ui_TabelTanc()
+        # self.w2.setupUi(self.window)
         #Second window settings
         self.window.setWindowTitle("Raport cantitati")
         self.window.setFixedSize(480,515)
-        delegate = AlignDelegate(self.w2.TabelDate)
-        self.w2.TabelDate.setItemDelegate(delegate)
-        self.w2.TabelDate.resizeColumnsToContents()
+        delegate = AlignDelegate(self.window.w2.TabelDate)
+        self.window.w2.TabelDate.setItemDelegate(delegate)
+        self.window.w2.TabelDate.resizeColumnsToContents()
 
         #SHORTCUTS#
         QShortcut('Esc',self.window,self.window.close)
+        self.window.w2.Copiere.clicked.connect(self.copyTabel)
 
         #BUTTONS#
         self.ui.butonTabel.clicked.connect(self.window.show)
@@ -232,7 +262,7 @@ class MainWindow(QMainWindow):
         return cArrInt
         
     def showNewWindow(self,dF): ##CREATE NEW WINDOW FOR THE QUANTITY TABLE
-        if self.w2.TabelDate.isVisible() == True:
+        if self.window.w2.TabelDate.isVisible() == True:
             arr = self.loadData(dF)
             path = f'rapoarte/{date.today()}.txt'
 
@@ -247,9 +277,9 @@ class MainWindow(QMainWindow):
             
 
             for item in range(len(arr)):
-                self.w2.TabelDate.setItem(item,0,QTableWidgetItem(str(txt[item])))          
-                self.w2.TabelDate.setItem(item,1,QTableWidgetItem(str(arr[item])))
-                self.w2.TabelDate.setItem(item,2,QTableWidgetItem(str(arr[item]-txt[item])))
+                self.window.w2.TabelDate.setItem(item,0,QTableWidgetItem(str(txt[item])))          
+                self.window.w2.TabelDate.setItem(item,1,QTableWidgetItem(str(arr[item])))
+                self.window.w2.TabelDate.setItem(item,2,QTableWidgetItem(str(arr[item]-txt[item])))
 
     #HAMBURGER MENU ANIMATION#
     def slideSideMenu(self):
@@ -271,6 +301,23 @@ class MainWindow(QMainWindow):
             self.animation.setEasingCurve(QtCore.QEasingCurve.Type.InOutQuart)
             self.animation.start()
     #HAMBURGER MENU ANIMATION#
+    def copyTabel(self):
+        selected = self.window.w2.TabelDate.selectAll()
+        
+        # copied = '\t'+"\t".join([str(self.window.w2.TabelDate.horizontalHeaderItem(i).text()) 
+        #                             for i in range(selected[0].leftColumn(), selected[0].rightColumn()+1)])
+        # copied = copied + '\n'
+
+        # for row in range(selected[0].topRow(), selected[0].bottomRow()+1):
+        #     copied += self.window.w2.TabelDate.verticalHeaderItem(row).text() + '\t'
+        #     for column in range(selected[0].leftColumn(), selected[0].rightColumn()+1):
+        #         try:
+        #             copied += str(self.window.w2.TabelDate.item(row,column).text()) + "\t"
+        #         except AttributeError:
+        #             copied += "\t"
+        #     copied = copied[:-1] + "\n" #eliminate last '\t'
+        #     print(copied)
+
 
     #DRAGABLE WINDOWLESS FRAME#
     def mousePressEvent(self, event):
@@ -290,11 +337,11 @@ class MainWindow(QMainWindow):
         
         if reply == QMessageBox.StandardButton.Yes:
             self.window.close()
-            self.thread.quit()
             event.accept()
         else:
             event.ignore()
-    
+
+
 
 
        

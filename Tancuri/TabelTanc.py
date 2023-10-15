@@ -12,13 +12,12 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_TabelTanc(object):
     def setupUi(self, TabelTanc):
         TabelTanc.setObjectName("TabelTanc")
-        TabelTanc.resize(462, 516)
+        TabelTanc.resize(454, 475)
         TabelTanc.setDocumentMode(False)
         self.WidgetTabel = QtWidgets.QWidget(parent=TabelTanc)
         self.WidgetTabel.setObjectName("WidgetTabel")
-        self.verticalLayout = QtWidgets.QVBoxLayout(self.WidgetTabel)
-        self.verticalLayout.setObjectName("verticalLayout")
         self.TabelDate = QtWidgets.QTableWidget(parent=self.WidgetTabel)
+        self.TabelDate.setGeometry(QtCore.QRect(9, 9, 463, 493))
         font = QtGui.QFont()
         font.setBold(False)
         self.TabelDate.setFont(font)
@@ -85,7 +84,9 @@ class Ui_TabelTanc(object):
         self.TabelDate.horizontalHeader().setHighlightSections(True)
         self.TabelDate.verticalHeader().setVisible(True)
         self.TabelDate.verticalHeader().setHighlightSections(True)
-        self.verticalLayout.addWidget(self.TabelDate)
+        self.Copiere = QtWidgets.QPushButton(parent=self.WidgetTabel)
+        self.Copiere.setGeometry(QtCore.QRect(40, 10, 75, 24))
+        self.Copiere.setObjectName("Copiere")
         TabelTanc.setCentralWidget(self.WidgetTabel)
         self.statusbar = QtWidgets.QStatusBar(parent=TabelTanc)
         self.statusbar.setEnabled(True)
@@ -94,6 +95,7 @@ class Ui_TabelTanc(object):
 
         self.retranslateUi(TabelTanc)
         QtCore.QMetaObject.connectSlotsByName(TabelTanc)
+
 
     def retranslateUi(self, TabelTanc):
         _translate = QtCore.QCoreApplication.translate
@@ -138,3 +140,4 @@ class Ui_TabelTanc(object):
         __sortingEnabled = self.TabelDate.isSortingEnabled()
         self.TabelDate.setSortingEnabled(False)
         self.TabelDate.setSortingEnabled(__sortingEnabled)
+        self.Copiere.setText(_translate("TabelTanc", "Copiere"))

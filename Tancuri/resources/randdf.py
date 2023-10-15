@@ -11,5 +11,6 @@ def GetData2():
             ['Tanc M4', random.randint(0,100)]]
 
     dF = pd.DataFrame(data,columns=['Tancuri','Procent'])
-
+  
     return dF
+
